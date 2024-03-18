@@ -16,6 +16,11 @@
 // Vendor
 // Vendor put here (e.g. animate.css, normalize.css)
 @import '../css/vendor/animate.min.css';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/utilities/api';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/containers';
 
 // Base
 @import 'base/general';

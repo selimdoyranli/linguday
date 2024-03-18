@@ -71,8 +71,33 @@ export default defineNuxtConfig({
          */
         scss: {
           additionalData: `
+                /*
+                  Vendor
+                */
+
+                // Bootstrap vendor
+                @import "bootstrap/scss/_functions.scss";
+                @import "bootstrap/scss/_variables.scss";
+                @import "bootstrap/scss/_mixins.scss";
+
+                /*
+                  Overrides
+                */
+
+                // Bootstrap overrides
+                @import "@/assets/style/scss/overrides/bootstrap/_dark-mode.override.scss";
+                @import "@/assets/style/scss/overrides/bootstrap/_grid.override.scss";
+                @import "@/assets/style/scss/overrides/bootstrap/_spacing.override.scss";
+
+                /*
+                  Functions
+                */
                 @import "@/assets/style/scss/functions/_center.scss";
                 @import "@/assets/style/scss/functions/_triangle.scss";
+
+                /*
+                  Mixins
+                */
                 @import "@/assets/style/scss/mixins/_gradient.scss";
               `
         }
