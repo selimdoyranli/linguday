@@ -1,9 +1,7 @@
 <template lang="pug">
 .page.home-page
-  h1 {{ message.title }}
-  p {{ message.description }}
-
-  NuxtLink(:to="navigation.link") {{ navigation.title }}
+  h1.home-page__title {{ message.title }}
+  p.home-page__description {{ message.description }}
 </template>
 
 <script lang="ts" setup>
@@ -15,8 +13,8 @@ definePageMeta({
 })
 
 const message = ref<WelcomeMessageTypes>({
-  title: 'Home page',
-  description: 'Welcome to home page'
+  title: 'Daily linguistic things.',
+  description: 'Discover things related to the language you want to learn, such as daily idioms, words, and more'
 })
 
 const navigation = ref<HomeNavigationTypes>({
@@ -24,3 +22,5 @@ const navigation = ref<HomeNavigationTypes>({
   link: '/about'
 })
 </script>
+
+<style lang="scss" src="./Home.page.scss"></style>

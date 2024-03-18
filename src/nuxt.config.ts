@@ -143,7 +143,9 @@ export default defineNuxtConfig({
       {
         autoImports: ['defineStore', 'acceptHMRUpdate']
       }
-    ]
+    ],
+    // https://nuxt.com/modules/icon
+    ['nuxt-icon', {}]
   ],
   /**
    * Plugins

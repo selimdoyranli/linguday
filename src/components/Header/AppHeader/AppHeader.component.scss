@@ -1,10 +1,21 @@
 .app-header {
-  position: var(--header-position);
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: var(--z-index-header);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: var(--header-height);
-  padding: 16px;
-  background-color: var(--color-ui-02);
+  padding: 0 calc(#{$spacer} * 4);
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+
+  &__actions {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-block-start: var(--spacer);
+  }
 }

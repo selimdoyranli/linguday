@@ -1,3 +1,9 @@
 .home-page {
   position: relative;
+
+  &__title {
+    color: var(--color-text-01);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-6xl);
+  }
 }
