@@ -120,6 +120,10 @@ export default defineNuxtConfig({
       }
     ]
   ],
+  /**
+   * Plugins
+   */
+  plugins: ['@/plugins/vuesax.ts'],
 
   /**
    * Hooks
