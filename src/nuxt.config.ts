@@ -145,7 +145,42 @@ export default defineNuxtConfig({
       }
     ],
     // https://nuxt.com/modules/icon
-    ['nuxt-icon', {}]
+    ['nuxt-icon', {}],
+    // https://nuxt.com/modules/i18n
+    [
+      '@nuxtjs/i18n',
+      {
+        lazy: true,
+        locales: [
+          {
+            name: 'English',
+            title: 'English',
+            code: 'en',
+            iso: 'en-US',
+            file: 'en.ts'
+          },
+          {
+            name: 'Turkish',
+            title: 'Türkçe',
+            code: 'tr',
+            iso: 'tr-TR',
+            file: 'tr.ts'
+          }
+        ],
+        langDir: 'locales/',
+        defaultLocale: 'tr',
+        strategy: 'no_prefix',
+        detectBrowserLanguage: false,
+        parsePages: false,
+        compilation: {
+          strictMessage: false,
+          escapeHtml: true
+        },
+        modifiers: {
+          atSign: () => '@'
+        }
+      }
+    ]
   ],
   /**
    * Plugins

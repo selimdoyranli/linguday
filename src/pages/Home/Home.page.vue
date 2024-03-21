@@ -6,7 +6,6 @@
 
 <script lang="ts" setup>
 import type { WelcomeMessageTypes } from '@/types'
-import type { HomeNavigationTypes } from './Home.page.types'
 
 definePageMeta({
   layout: 'default'
@@ -15,11 +14,6 @@ definePageMeta({
 const message = ref<WelcomeMessageTypes>({
   title: 'Daily linguistic things.',
   description: 'Discover things related to the language you want to learn, such as daily idioms, words, and more'
-})
-
-const navigation = ref<HomeNavigationTypes>({
-  title: 'Go to about page',
-  link: '/about'
 })
 </script>
 
