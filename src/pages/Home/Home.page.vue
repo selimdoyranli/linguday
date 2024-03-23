@@ -1,19 +1,15 @@
 <template lang="pug">
 .page.home-page
-  h1.home-page__title {{ message.title }}
-  p.home-page__description {{ message.description }}
+  .container
+    h1.home-page__title {{ $t('app.slogan') }}
+    p.home-page__description {{ $t('app.description') }}
+
+    AppToolList
 </template>
 
 <script lang="ts" setup>
-import type { WelcomeMessageTypes } from '@/types'
-
 definePageMeta({
   layout: 'default'
-})
-
-const message = ref<WelcomeMessageTypes>({
-  title: 'Daily linguistic things.',
-  description: 'Discover things related to the language you want to learn, such as daily idioms, words, and more'
 })
 </script>
 

@@ -2,7 +2,8 @@ export default {
   app: {
     name: 'Linguday',
     domain: 'linguday.com',
-    description: '',
+    slogan: 'Günlük yenilenen içerikler ile İngilizce öğren',
+    description: 'Her gün yenilenen kelimeler, deyimler, ve daha fazla şeyler ile ingilizceni günden güne geliştir',
     copyright: `Linguday <a href="https://selimdoyranli.com" title="selimdoyranli" target="_blank">{atSign}selimdoyranli</a> tarafından`,
     publisher: 'selimdoyranli'
   },
