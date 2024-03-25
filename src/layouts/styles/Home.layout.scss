@@ -1,0 +1,16 @@
+.home-layout {
+  $layout: '.layout';
+
+  position: relative;
+
+  #{$layout} {
+    &__inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      background-image: url('~/assets/media/elements/grid-bg.png');
+      background-repeat: no-repeat;
+      background-position: center -250px;
+    }
+  }
+}

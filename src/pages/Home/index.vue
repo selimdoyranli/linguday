@@ -1,15 +1,16 @@
 <template lang="pug">
 .page.home-page
   .container
-    h1.home-page__title {{ $t('app.slogan') }}
-    p.home-page__description {{ $t('app.description') }}
+    .page-head
+      h1.page-head__title {{ $t('app.slogan') }}
+      p.page-head__description {{ $t('app.description') }}
 
     AppToolList
 </template>
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: 'default'
+  layout: 'home'
 })
 </script>
 

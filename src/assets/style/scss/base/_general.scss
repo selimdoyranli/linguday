@@ -28,3 +28,16 @@ body {
   font-family: var(--font-family-rubik);
   background-color: var(--color-ui-01);
 }
+
+p {
+  color: var(--color-text-02);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-lg);
+}
+
+button {
+  &:active {
+    transform: scale(0.96);
+    transform-origin: center;
+  }
+}

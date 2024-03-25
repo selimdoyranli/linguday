@@ -2,21 +2,7 @@
   position: relative;
   padding-top: 30vh;
 
-  &__title {
-    color: var(--color-text-01);
-    font-weight: var(--font-weight-bold);
-    font-size: calc(var(--font-size-5xl) * 1);
-  }
-
-  &__description {
-    color: var(--color-text-02);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-xl);
-    margin-block-start: calc(var(--spacer) * 4);
-  }
-
   .app-tool-list {
     position: relative;
-    margin-block-start: calc(var(--spacer) * 20);
   }
 }

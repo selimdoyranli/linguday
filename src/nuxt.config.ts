@@ -169,7 +169,8 @@ export default defineNuxtConfig({
         ],
         langDir: 'locales/',
         defaultLocale: 'tr',
-        strategy: 'no_prefix',
+        customRoutes: 'config',
+        strategy: 'prefix_except_default',
         detectBrowserLanguage: false,
         parsePages: false,
         compilation: {
@@ -178,6 +179,16 @@ export default defineNuxtConfig({
         },
         modifiers: {
           atSign: () => '@'
+        },
+        pages: {
+          'Home/index': {
+            tr: '/',
+            en: '/'
+          },
+          'TodaysWords/index': {
+            tr: '/gunun-kelimeleri',
+            en: '/todays-words'
+          }
         }
       }
     ]
@@ -188,21 +199,18 @@ export default defineNuxtConfig({
   plugins: ['@/plugins/vuesax.ts'],
 
   /**
+   * Build
+   */
+  build: {},
+
+  /**
    * Hooks
    */
   hooks: {
-    'pages:extend'(routes) {
-      routes.push(
-        {
-          name: 'index',
-          path: '/',
-          file: '@/pages/Home/Home.page.vue'
-        },
-        {
-          path: '/about',
-          file: '@/pages/About/About.page.vue'
-        }
-      )
+    'pages:extend'(pages) {
+      const vueOnlyPages = pages.filter(page => page.file?.endsWith('.vue'))
+
+      pages.splice(0, pages.length, ...vueOnlyPages)
     }
   },
 
