@@ -1,0 +1,27 @@
+.vs-dialog {
+  &-original {
+    color: var(--color-text-01) !important;
+    background-color: var(--color-ui-03) !important;
+    border: 1px solid var(--color-border-03) !important;
+  }
+
+  &__close {
+    border: 1px solid var(--color-border-03) !important;
+
+    .vs-icon-close {
+      &:before,
+      &:after {
+        background-color: var(--color-icon-01) !important;
+      }
+    }
+  }
+
+  &__content {
+    padding: calc(var(--spacer) * 4) calc(var(--spacer) * 8) !important;
+    color: var(--color-text-01);
+
+    p {
+      color: inherit;
+    }
+  }
+}
